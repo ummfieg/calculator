@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cuculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="header__logo--icon">
+          <img
+            class="header__logo--icon--books"
+            src="assets/images/books.svg"
+            alt="logo_image"
+          />
+          <img
+            class="header__logo--icon--pencil"
+            src="assets/images/pencil-logo.svg"
+            alt="logo_image"
+          />
+        </div>
+        <div class="header__logo--text">
+          <h1>cal</h1>
+          <h1>cul</h1>
+          <h1>ator</h1>
+        </div>
+        <button class="header__logo--history">
+          <img
+            class="header__logo--history--icon"
+            src="assets/images/history.svg"
+          />
+        </button>
+      </header>
+      <section class="title">
+        <form class="title__form">
+          ❝
+          <input
+            class="title__input"
+            type="text"
+            placeholder="문구는 25자 내로 입력할 수 있어요!"
+            value=""
+          />
+          <div class="title__text" style="display: none"></div>
+          ❞
+          <button class="title__btn title__btn--submit">
+            <img
+              class="title__icon title__icon--submit"
+              src="assets/images/check.svg"
+              alt="submit icon"
+            />
+          </button>
+        </form>
+        <div class="title__icons">
+          <button class="title__btn title__btn--edit">
+            <img
+              class="title__icon title__icon--edit"
+              src="assets/images/edit.svg"
+              alt="edit icon"
+            />
+          </button>
+        </div>
+      </section>
+      <section class="timer">
+        <div class="timer__slots">
+          <div class="timer__slots--minute" data-label="minute">
+            <div class="timer__slot">00</div>
+            <div class="timer__slot">01</div>
+            <div class="timer__slot">02</div>
+            <div class="timer__slot">03</div>
+            <div class="timer__slot">04</div>
+            <div class="timer__slot">05</div>
+            <div class="timer__slot">06</div>
+            <div class="timer__slot">07</div>
+            <div class="timer__slot">08</div>
+            <div class="timer__slot">09</div>
+            <div class="timer__slot">10</div>
+            <div class="timer__slot">11</div>
+            <div class="timer__slot">12</div>
+            <div class="timer__slot">13</div>
+            <div class="timer__slot">14</div>
+            <div class="timer__slot">15</div>
+            <div class="timer__slot">16</div>
+            <div class="timer__slot">17</div>
+            <div class="timer__slot">18</div>
+            <div class="timer__slot">19</div>
+            <div class="timer__slot">20</div>
+            <div class="timer__slot">21</div>
+            <div class="timer__slot">22</div>
+            <div class="timer__slot">23</div>
+            <div class="timer__slot">24</div>
+            <div class="timer__slot">25</div>
+            <div class="timer__slot">26</div>
+            <div class="timer__slot">27</div>
+            <div class="timer__slot">28</div>
+            <div class="timer__slot">29</div>
+          </div>
+
+          <span class="timer__slots--col">:</span>
+
+          <div
+            class="timer__slots--second timer__second--one"
+            data-label="second-one"
+          >
+            <div class="timer__slot">0</div>
+            <div class="timer__slot">1</div>
+            <div class="timer__slot">2</div>
+            <div class="timer__slot">3</div>
+            <div class="timer__slot">4</div>
+            <div class="timer__slot">5</div>
+          </div>
+          <div
+            class="timer__slots--second timer__second--two"
+            data-label="second-two"
+          >
+            <div class="timer__slot">0</div>
+            <div class="timer__slot">1</div>
+            <div class="timer__slot">2</div>
+            <div class="timer__slot">3</div>
+            <div class="timer__slot">4</div>
+            <div class="timer__slot">5</div>
+            <div class="timer__slot">6</div>
+            <div class="timer__slot">7</div>
+            <div class="timer__slot">8</div>
+            <div class="timer__slot">9</div>
+          </div>
+        </div>
+
+        <div class="timer__actions">
+          <div class="timer__btn timer__btn--play">
+            <img src="assets/images/play.svg" alt="play icon" />
+          </div>
+          <div class="timer__btn timer__btn--pause">
+            <img src="assets/images/pause.svg" alt="pause icon" />
+          </div>
+          <div class="timer__btn timer__btn--reset">
+            <img src="assets/images/reset.svg" alt="reset icon" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="calculator">
+          <span class="calculator__emoji">👀</span>
+          <div class="calculator__display">
+            <span class="calculator__display--num"></span>
+          </div>
+          <div class="calculator__numbers">
+            <div class="calculator__btn--group calculator__btn-group--small">
+              <button class="calculator__btn calculator__btn--tax-minus">
+                TAX-
+              </button>
+              <button class="calculator__btn calculator__btn--tax-plus">
+                TAX+
+              </button>
+            </div>
+            <div class="calculator__btn--group calculator__btn-group--small">
+              <button
+                class="calculator__btn calculator__btn--m-ex"
+                data-value="M/EX"
+              >
+                M/EX
+              </button>
+              <button
+                class="calculator__btn calculator__btn--percent"
+                data-value="%"
+              >
+                %
+              </button>
+              <button
+                class="calculator__btn calculator__btn--root"
+                data-value="root"
+              >
+                <img src="assets/images/root.svg" alt="root icon" />
+              </button>
+              <button class="calculator__btn calculator__btn--arrow">►</button>
+              <button
+                class="calculator__btn calculator__btn--gt"
+                data-value="GT"
+              >
+                GT
+              </button>
+            </div>
+            <div class="calculator__btn--group">
+              <button
+                class="calculator__btn calculator__btn--mc"
+                data-value="MC"
+              >
+                MC
+              </button>
+              <button
+                class="calculator__btn calculator__btn--mr"
+                data-value="MR"
+              >
+                MR
+              </button>
+              <button
+                class="calculator__btn calculator__btn--m-minus"
+                data-value="M-"
+              >
+                M-
+              </button>
+              <button
+                class="calculator__btn calculator__btn--m-plus"
+                data-value="M+"
+              >
+                M+
+              </button>
+              <button
+                class="calculator__btn calculator__btn--m-divide"
+                data-value="÷"
+              >
+                ÷
+              </button>
+            </div>
+            <div class="calculator__btn--group">
+              <button class="calculator__btn" data-value="+/-">
+                <img src="assets/images/plus-minus.svg" alt="plus minus icon" />
+              </button>
+              <button
+                class="calculator__btn calculator__btn--num7"
+                data-value="7"
+              >
+                7
+              </button>
+              <button
+                class="calculator__btn calculator__btn--num8"
+                data-value="8"
+              >
+                8
+              </button>
+              <button
+                class="calculator__btn calculator__btn--num9"
+                data-value="9"
+              >
+                9
+              </button>
+              <button
+                class="calculator__btn calculator__btn--mul"
+                data-value="×"
+              >
+                ×
+              </button>
+            </div>
+            <div class="calculator__btn--group">
+              <button class="calculator__btn calculator__btn--c" data-value="C">
+                C
+              </button>
+              <button
+                class="calculator__btn calculator__btn--num4"
+                data-value="4"
+              >
+                4
+              </button>
+              <button
+                class="calculator__btn calculator__btn--num5"
+                data-value="5"
+              >
+                5
+              </button>
+              <button
+                class="calculator__btn calculator__btn--num6"
+                data-value="6"
+              >
+                6
+              </button>
+              <button
+                class="calculator__btn calculator__btn--minus"
+                data-value="-"
+              >
+                −
+              </button>
+            </div>
+            <div class="calculator__btn--group calculator__btn--direction">
+              <div class="calculator__btn--group calculator__btn--panel">
+                <div class="calculator__btn--group">
+                  <button class="calculator__btn calculator__btn--ac">
+                    AC
+                  </button>
+                  <button
+                    class="calculator__btn calculator__btn--num1"
+                    data-value="1"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="calculator__btn calculator__btn--num2"
+                    data-value="2"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="calculator__btn calculator__btn--num3"
+                    data-value="3"
+                  >
+                    3
+                  </button>
+                </div>
+                <div class="calculator__btn--group">
+                  <button
+                    class="calculator__btn calculator__btn--num0"
+                    data-value="0"
+                  >
+                    0
+                  </button>
+                  <button
+                    class="calculator__btn calculator__btn--num00"
+                    data-value="00"
+                  >
+                    00
+                  </button>
+                  <button
+                    class="calculator__btn calculator__btn--dot"
+                    data-value="."
+                  >
+                    .
+                  </button>
+                  <button class="calculator__btn calculator__btn--equal">
+                    =
+                  </button>
+                </div>
+              </div>
+              <div class="calculator__btn--group calculator__btn--operator">
+                <button class="calculator__btn" data-value="+">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="history">
+        <div class="history__title">
+          <h3>history</h3>
+          <button class="history__close--btn">
+            <img
+              src="assets/images/open-btn.svg"
+              alt="open icon"
+              class="icon open-icon"
+            />
+            <img
+              src="assets/images/close-btn.svg"
+              alt="close icon"
+              class="icon close-icon"
+            />
+          </button>
+        </div>
+        <span>최대 5개의 이전 기록을 볼 수 있어요!</span>
+        <div class="history__columns"></div>
+      </section>
+    </main>
+    <footer>
+      <span class="footer__contact">▪︎CS/Contact💌ummfieg@naver.com</span>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
